@@ -1,0 +1,59 @@
+Shareholder Momentum, and Research Analysts View Templates:
+
+Designed the template workbooks and PPT as per business requirements.
+
+Created a separate DLL for each template.
+
+Wrote classes that get called when the template needs to be generated.
+
+These classes contain the code that pull data from the database and populate the sheet with this data, with a few minor pre and post processing steps to ensure that the report generated is as required.
+
+Document merge and generation:
+
+Created this class, which contains the methods for generating the merged Excel document, and also methods for generating PPT and PDF documents.
+
+Was closely involved in deciding the database table structure for storing the metadata for PPT generation.
+
+Created the PPT template, which would be used to generate the PPT from the previously generated Excel document.
+
+Issues found and resolved:
+
+Found a new method to generate the merged Excel document, which avoids a very important issue of cell references.
+
+Found two bugs in the Aspose Cells API, which were causing an erroneous output of the merged excel document in the final step. I coordinated with the Aspose team, informed them about these issues, and obtained the updated DLL from the Aspose team.
+
+Found one bug in the Aspose Cells API, which was causing wrong PPT and PDF output, about which I again informed the Aspose team, and got the DLL updated again.
+
+Techniques and technologies used:
+
+C# .NET and SQL Database
+The entire application is built on top of the .NET framework, and using SQL server as the database. 
+
+Aspose Smart Markers
+Smart markers are placeholders in a template document, using which the appropriate data is populated in the cells.
+It is the part that ties the code, database, and worksheet together.
+
+Stored Procedures in database
+Stored procedures that return data that is to be populated in the worksheets, PPTs and PDF.
+
+Excel:
+Named Ranges used to define the dynamic cell range for the charts.
+Conditional Formatting used to format the cells according to value in that cell, as well as adjacent cells.
+
+PowerPoint: 
+Placeholders, positions and sizes of components to be inserted into the slides.
+Database fields for storing this metadata.
+Charts inserted as images
+
+Overall learnings:
+
+Various new technologies like Aspose, .NET
+
+Features and intricacies of Excel.
+
+Source Control – TFS.
+
+How to make use of the Visual Studio IDE and its debugger, SQL Server 2014 Management Studio.
+
+Object oriented application development: how to write enterprise, production level code.
+
